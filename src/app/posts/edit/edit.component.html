@@ -1,23 +1,23 @@
 <div class="container">
   <h1>Edit Post</h1>
 
-  <form [formGroup]="editForm" (ngSubmit)="editPost()">
+  <form [formGroup]="editForm" (ngSubmit)="update()">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
-      <input type="text" name="text" class="form-control" formControlName="title">
+      <input type="text" name="text" class="form-control" formControlName="title" [(ngModel)]="postObject.title">
       <div *ngIf="editForm.get('title').hasError('required')" class="alert alert-danger">
         Please enter a title!
       </div>
     </div>
     <div class="mb-3">
       <label for="content" class="form-label">Content</label>
-      <input type="text" name="body" class="form-control" formControlName="body">
+      <input type="text" name="body" class="form-control" formControlName="body" [(ngModel)]="postObject.body">
       <div *ngIf="editForm.get('body').hasError('required')" class="alert alert-danger">
         Please enter a body!
       </div>
     </div>
     <a routerLink="/posts/home" class="btn btn-primary">Back</a>
     &nbsp;
-    <button class="btn btn-success" [disabled]="!editForm.valid">Create</button>
+    <button class="btn btn-success" [disabled]="!editForm.valid">Update</button>
   </form>
 </div>

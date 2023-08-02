@@ -20,7 +20,7 @@
           <td>{{ post.title }}</td>
           <td>{{ post.body }}</td>
           <td>
-            <a [routerLink]="['/posts/view', post.id]" class="btn btn-primary">View</a>
+            <a [routerLink]="['/posts/details', post.id]" class="btn btn-primary">View</a>
             &nbsp;
             <a [routerLink]="['/posts/edit', post.id]" class="btn btn-success">Edit</a>
             &nbsp;

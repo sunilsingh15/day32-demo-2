@@ -1,1 +1,20 @@
-<p>post-details works!</p>
+<div class="container">
+  <h1>View Post Details</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Title</td>
+        <td>Body</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ postObject.id }}</td>
+        <td>{{ postObject.title }}</td>
+        <td>{{ postObject.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button [routerLink]="['/posts/home']" class="btn btn-primary">Back</button>
+</div>
